@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Insset App</string>
+    <string name="titre_accueil">Accueil</string>
+    <string name="bio_accueil">Bastian Boulogne</string>
+    <string name="titre_liste">Liste</string>
+    <string name="nom_exemple">Galaxy S10</string>
+    <string name="marque_exemple">Samsung</string>
+    <string name="image_exemple">xiaomi logo</string>
+    <string name="like_exemple">bouton like</string>
+    <string name="indication_accueil">Les étoiles sont intéractif</string>
+</resources>
