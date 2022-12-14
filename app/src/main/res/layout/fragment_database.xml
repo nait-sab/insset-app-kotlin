@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fond"
+    tools:context=".fragments.DatabaseFragment">
+
+    <TextView
+        android:id="@+id/databaseTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/database_titre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/texte"
+        />
+
+    <LinearLayout
+        android:id="@+id/databaseBoutons"
+        android:layout_below="@id/databaseTitre"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/databaseAdd"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/database_bouton_creer"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@color/fondSecondaire"
+            android:textColor="@color/texte"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/databaseDelete"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/database_bouton_detruire"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@color/fondSecondaire"
+            android:textColor="@color/texte"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/databaseListe"
+        android:layout_below="@id/databaseBoutons"
+        android:layout_marginTop="10dp"
+        android:layoutAnimation="@anim/liste_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

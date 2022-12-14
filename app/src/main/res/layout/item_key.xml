@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/liste_item_fond"
+    android:elevation="16dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/item_key_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/image_exemple"
+        android:src="@drawable/img_xiaomi" />
+
+    <TextView
+        android:id="@+id/item_key_key"
+        android:layout_marginHorizontal="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/nom_exemple"
+        android:textColor="@color/texte"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Bouton Like -->
+    <ImageView
+        android:id="@+id/item_key_bin"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/like_exemple"
+        android:src="@drawable/ic_delete"
+        app:tint="@color/texte" />
+
+</LinearLayout>

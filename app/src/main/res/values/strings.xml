@@ -7,5 +7,7 @@
     <string name="marque_exemple">Samsung</string>
     <string name="image_exemple">xiaomi logo</string>
     <string name="like_exemple">bouton like</string>
-    <string name="indication_accueil">Les étoiles sont intéractif</string>
+    <string name="database_titre">Room</string>
+    <string name="database_bouton_detruire">Détruire</string>
+    <string name="database_bouton_creer">Créer</string>
 </resources>

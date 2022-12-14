@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import fr.naitsab.insset_app.databinding.HomeLayoutBinding
 import fr.naitsab.insset_app.fragments.AccueilFragment
+import fr.naitsab.insset_app.fragments.DatabaseFragment
 import fr.naitsab.insset_app.fragments.TelephonesFragment
 
 class Home : AppCompatActivity() {
@@ -23,6 +24,7 @@ class Home : AppCompatActivity() {
             when (it.itemId) {
                 R.id.accueil -> chargerFragment(AccueilFragment())
                 R.id.telephones -> chargerFragment(TelephonesFragment())
+                R.id.database -> chargerFragment(DatabaseFragment())
             }
             true
         }
