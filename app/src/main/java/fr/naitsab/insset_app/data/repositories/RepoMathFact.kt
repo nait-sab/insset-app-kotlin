@@ -7,12 +7,16 @@ import fr.naitsab.insset_app.domain.models.MathFactRoom
 import fr.naitsab.insset_app.domain.retrofits.RetrofitMathFact
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlin.random.Random
 
 class RepoMathFact {
     private val dao = App.instance.appDatabase.interfaceDaoMathFact()
 
     suspend fun fetchData() {
-        add(RetrofitMathFact.getRemote().getRandomMathFact().toRoom())
+        var MathFactRoom =
+            if (Random.nextBoolean()) RetrofitMathFact.getRemote().getRandomMathFact()
+                .toRoom() else RetrofitMathFact.getRemote().getRandomYearMathFact().toRoom()
+        add(MathFactRoom)
     }
 
     fun get(): LiveData<List<MathFactRoom>> {
@@ -23,8 +27,8 @@ class RepoMathFact {
         dao.add(fact)
     }
 
-    suspend fun delete(fact: MathFactRoom) = withContext(Dispatchers.IO) {
-        dao.delete(fact)
+    suspend fun delete(id: Long) = withContext(Dispatchers.IO) {
+        dao.delete(id)
     }
 
     suspend fun deleteAll() = withContext(Dispatchers.IO) {

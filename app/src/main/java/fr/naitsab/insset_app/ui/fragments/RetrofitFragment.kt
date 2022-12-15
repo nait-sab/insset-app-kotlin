@@ -20,7 +20,7 @@ class RetrofitFragment : Fragment() {
     private lateinit var viewModel: MathFactViewModel
     private lateinit var adapter: AdapterMathFact
 
-    private var observer = Observer<List<MathFactUi.Fact>> {
+    private var observer = Observer<List<MathFactUi>> {
         adapter.submitList(it)
     }
 
@@ -36,7 +36,7 @@ class RetrofitFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[MathFactViewModel::class.java]
         adapter = AdapterMathFact { item, _ ->
-            onClick(item)
+            onClick(item as MathFactUi.Fact)
         }
 
         binding.retrofitListe.layoutManager =
@@ -63,7 +63,7 @@ class RetrofitFragment : Fragment() {
     }
 
     private fun onClick(fact: MathFactUi.Fact) {
-        viewModel.delete(fact)
+        viewModel.delete(fact.id)
         Toast.makeText(requireContext(), "Supprésion du fact : " + fact.number, Toast.LENGTH_SHORT)
             .show()
     }

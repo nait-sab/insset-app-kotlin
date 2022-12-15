@@ -6,14 +6,14 @@ import fr.naitsab.insset_app.domain.models.MathFactRoom
 
 @Dao
 interface DaoMathFact {
-    @Query("select * from mathfacts")
+    @Query("select * from mathfacts order by type asc")
     fun get(): LiveData<List<MathFactRoom>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun add(fact: MathFactRoom)
 
-    @Delete
-    suspend fun delete(fact: MathFactRoom)
+    @Query("delete from mathfacts where id = :id")
+    suspend fun delete(id: Long)
 
     @Query("delete from mathfacts")
     suspend fun deleteAll()

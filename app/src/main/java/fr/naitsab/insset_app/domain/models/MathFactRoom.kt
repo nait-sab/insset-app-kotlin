@@ -9,6 +9,7 @@ import com.google.gson.annotations.SerializedName
 sealed class MathFactUi {
     data class Type(var nom: String) : MathFactUi()
     data class Fact(
+        var id: Long,
         var text: String,
         var number: Int,
         var found: Boolean,
