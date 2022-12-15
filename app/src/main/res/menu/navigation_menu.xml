@@ -20,4 +20,11 @@
         android:icon="@drawable/ic_database"
         android:title=""
         />
+
+    <item
+        android:id="@+id/retrofit"
+        android:enabled="true"
+        android:icon="@drawable/ic_retrofit"
+        android:title=""
+        />
 </menu>

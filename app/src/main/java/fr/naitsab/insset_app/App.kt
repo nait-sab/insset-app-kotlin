@@ -2,7 +2,7 @@ package fr.naitsab.insset_app
 
 import android.app.Application
 import androidx.room.Room
-import fr.naitsab.insset_app.database.Database
+import fr.naitsab.insset_app.data.Database
 
 class App : Application() {
     companion object {

@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.tools
+package fr.naitsab.insset_app.domain.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,10 +9,10 @@ import fr.naitsab.insset_app.R
 import fr.naitsab.insset_app.databinding.ItemFooterBinding
 import fr.naitsab.insset_app.databinding.ItemMarqueBinding
 import fr.naitsab.insset_app.databinding.ItemTelephoneBinding
-import fr.naitsab.insset_app.models.DataItem
-import fr.naitsab.insset_app.models.DataType.TYPE_FOOTER
-import fr.naitsab.insset_app.models.DataType.TYPE_HEADER
-import fr.naitsab.insset_app.models.DataType.TYPE_ITEM
+import fr.naitsab.insset_app.domain.models.DataItem
+import fr.naitsab.insset_app.domain.models.DataType.TYPE_FOOTER
+import fr.naitsab.insset_app.domain.models.DataType.TYPE_HEADER
+import fr.naitsab.insset_app.domain.models.DataType.TYPE_ITEM
 
 class GestionnaireListe(private val liste : ArrayList<DataItem>, private val context : Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import fr.naitsab.insset_app.databinding.HomeLayoutBinding
-import fr.naitsab.insset_app.fragments.AccueilFragment
-import fr.naitsab.insset_app.fragments.DatabaseFragment
-import fr.naitsab.insset_app.fragments.TelephonesFragment
+import fr.naitsab.insset_app.ui.fragments.AccueilFragment
+import fr.naitsab.insset_app.ui.fragments.DatabaseFragment
+import fr.naitsab.insset_app.ui.fragments.RetrofitFragment
+import fr.naitsab.insset_app.ui.fragments.TelephonesFragment
 
 class Home : AppCompatActivity() {
     private lateinit var binding: HomeLayoutBinding
@@ -25,6 +26,7 @@ class Home : AppCompatActivity() {
                 R.id.accueil -> chargerFragment(AccueilFragment())
                 R.id.telephones -> chargerFragment(TelephonesFragment())
                 R.id.database -> chargerFragment(DatabaseFragment())
+                R.id.retrofit -> chargerFragment(RetrofitFragment())
             }
             true
         }

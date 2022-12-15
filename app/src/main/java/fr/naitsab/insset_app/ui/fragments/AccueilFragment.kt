@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.fragments
+package fr.naitsab.insset_app.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

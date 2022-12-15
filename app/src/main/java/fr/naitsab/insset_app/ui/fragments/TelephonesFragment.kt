@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.fragments
+package fr.naitsab.insset_app.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import fr.naitsab.insset_app.R
 import fr.naitsab.insset_app.databinding.FragmentListeBinding
-import fr.naitsab.insset_app.models.DataItem
-import fr.naitsab.insset_app.tools.GestionnaireListe
+import fr.naitsab.insset_app.domain.adapters.GestionnaireListe
+import fr.naitsab.insset_app.domain.models.DataItem
 
 class TelephonesFragment : Fragment() {
     private lateinit var binding: FragmentListeBinding

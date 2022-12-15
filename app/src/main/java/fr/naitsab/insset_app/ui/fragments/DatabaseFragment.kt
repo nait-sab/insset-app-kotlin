@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.fragments
+package fr.naitsab.insset_app.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,9 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import fr.naitsab.insset_app.databinding.FragmentDatabaseBinding
-import fr.naitsab.insset_app.models.KeyModel
-import fr.naitsab.insset_app.tools.AdapterKey
-import fr.naitsab.insset_app.viewModels.KeyViewModel
+import fr.naitsab.insset_app.domain.models.KeyModel
+import fr.naitsab.insset_app.domain.adapters.AdapterKey
+import fr.naitsab.insset_app.ui.viewModels.KeyViewModel
 
 class DatabaseFragment : Fragment() {
     private lateinit var binding: FragmentDatabaseBinding
@@ -53,8 +53,8 @@ class DatabaseFragment : Fragment() {
     }
 
     override fun onStop() {
+        viewModel.liste.removeObserver(observer)
         super.onStop()
-        viewModel.liste.observe(this, observer)
     }
 
     private fun add() {

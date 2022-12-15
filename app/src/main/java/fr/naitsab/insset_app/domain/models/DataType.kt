@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.models
+package fr.naitsab.insset_app.domain.models
 
 object DataType {
     const val TYPE_HEADER = 0

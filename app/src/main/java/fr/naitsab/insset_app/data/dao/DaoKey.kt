@@ -1,11 +1,11 @@
-package fr.naitsab.insset_app.database
+package fr.naitsab.insset_app.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import fr.naitsab.insset_app.models.KeyModel
+import fr.naitsab.insset_app.domain.models.KeyModel
 
 @Dao
-interface DatabaseInterface {
+interface DaoKey {
     @Query("select * from keys order by id desc")
     fun get(): LiveData<List<KeyModel>>
 

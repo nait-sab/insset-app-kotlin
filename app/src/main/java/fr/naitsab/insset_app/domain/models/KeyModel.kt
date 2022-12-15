@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.models
+package fr.naitsab.insset_app.domain.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

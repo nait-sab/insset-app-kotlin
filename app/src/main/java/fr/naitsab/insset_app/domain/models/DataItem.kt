@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.models
+package fr.naitsab.insset_app.domain.models
 
 sealed class DataItem {
     data class Marque(var nom: String) : DataItem()

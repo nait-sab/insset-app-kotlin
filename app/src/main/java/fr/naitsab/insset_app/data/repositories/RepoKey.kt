@@ -1,11 +1,11 @@
-package fr.naitsab.insset_app.database
+package fr.naitsab.insset_app.data.repositories
 
 import androidx.lifecycle.LiveData
 import fr.naitsab.insset_app.App
-import fr.naitsab.insset_app.models.KeyModel
+import fr.naitsab.insset_app.domain.models.KeyModel
 
-class Repo {
-    private val dao = App.instance.appDatabase.interfaceDao()
+class RepoKey {
+    private val dao = App.instance.appDatabase.interfaceDaoKey()
 
     fun get(): LiveData<List<KeyModel>> {
         return dao.get()

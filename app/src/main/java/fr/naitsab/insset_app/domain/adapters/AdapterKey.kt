@@ -1,4 +1,4 @@
-package fr.naitsab.insset_app.tools
+package fr.naitsab.insset_app.domain.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import fr.naitsab.insset_app.R
 import fr.naitsab.insset_app.databinding.ItemKeyBinding
-import fr.naitsab.insset_app.models.KeyModel
+import fr.naitsab.insset_app.domain.models.KeyModel
 
 private val differenceUtils = object : DiffUtil.ItemCallback<KeyModel>() {
     override fun areItemsTheSame(oldItem: KeyModel, newItem: KeyModel): Boolean {
